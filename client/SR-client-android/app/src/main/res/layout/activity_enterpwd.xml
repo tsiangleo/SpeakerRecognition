@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@drawable/bg"
+        android:text="请输入密码"/>
+
+
+    <EditText
+        android:layout_margin="20px"
+        android:hint="在这儿输入密码"
+        android:id="@+id/et_pwd"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1" />
+
+    <Button
+        android:id="@+id/btn"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:layout_margin="20px"
+        android:textSize="8pt"
+        android:text="芝麻开门"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

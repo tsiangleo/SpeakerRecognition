@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.tsiangleo.sr.client.activity.ServerSettingActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@drawable/bg"
+        android:text="服务器地址设置"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TableRow>
+            <TextView
+                android:text="服务器地址："
+                android:textSize="8pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <EditText
+                android:hint="例如:192.168.1.101"
+                android:textSize="8pt"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:inputType="text"
+                android:id="@+id/ipEditText" />
+
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="服务端口号："
+                android:textSize="8pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:hint="例如:8080"
+                android:textSize="8pt"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:id="@+id/portEditText"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+            <Button
+
+                android:textColor="#FFFFFF"
+                android:background="@drawable/view_yuan_button"
+                android:id="@+id/connectButton"
+                android:textSize="8pt"
+                android:text="测试连通性"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/view_yuan_button"
+                android:id="@+id/saveButton"
+                android:layout_marginTop="20px"
+                android:layout_marginRight="10px"
+                android:textSize="8pt"
+                android:text="保存"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:background="@drawable/view_yuan_button"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="10px"
+                android:id="@+id/cancelButton"
+                android:textSize="8pt"
+                android:text="取消"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+</LinearLayout>

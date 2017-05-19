@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.github.tsiangleo.sr.client">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sr"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <!--
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleInstance"
+            android:label="@string/app_name"/>
+         -->
+        <activity android:name=".activity.HomeActivity" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.RegistVoiceActivity" android:label="上传说话人语音"
+            android:parentActivityName=".activity.HomeActivity">
+        </activity>
+
+        <activity android:name=".activity.VerifyVoiceActivity" android:label="识别说话人语音"
+            android:parentActivityName=".activity.HomeActivity">
+        </activity>
+
+        <activity android:name=".activity.SettingActivity" android:label="更新模型库"
+            android:parentActivityName=".activity.HomeActivity">
+        </activity>
+
+        <activity android:name=".activity.ServerSettingActivity" android:label="服务器地址设置"
+            android:parentActivityName=".activity.HomeActivity">
+        </activity>
+
+
+        <activity android:name=".activity.FileChooseActivity" android:label="选择文件识别"
+            android:parentActivityName=".activity.HomeActivity">
+        </activity>
+
+
+        <activity android:name=".activity.AppListActivity" android:label="应用锁"
+            android:parentActivityName=".activity.SettingActivity">
+        </activity>
+
+        <activity android:name=".activity.PwdSettingActivity" android:label="密码设置"
+            android:parentActivityName=".activity.SettingActivity">
+        </activity>
+
+        <activity android:name=".activity.EnterPwdActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"/>
+
+        <service android:name=".service.WatchDogService" />
+
+        <receiver android:name=".receiver.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.tsiangleo.sr.client.activity.FileChooseActivity">
+
+
+    <TextView
+        android:id="@+id/hintTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#ffffff"
+        android:background="@drawable/bg"
+        android:gravity="center"
+        android:text="说话人语音识别子系统（非录音）~"/>
+
+    <ImageView
+        android:id="@+id/imageViewSpectrogram"
+    android:layout_margin="20px"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:scaleType="fitXY"/>
+
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_margin="20px"
+        android:textColor="#030303"
+        android:textSize="8pt"
+        android:layout_width="wrap_content"
+        android:layout_height="400px"
+        android:id="@+id/statusTextView" />
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:layout_margin="20px"
+        android:id="@+id/fileChooseButton"
+        android:textSize="8pt"
+        android:text="选择文件"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:layout_margin="20px"
+        android:id="@+id/startRecognitionButton"
+        android:textSize="8pt"
+        android:text="开始识别"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:radius="1px"
+        android:layout_margin="20px"
+        android:id="@+id/stopRecognitionButton"
+        android:textSize="8pt"
+        android:text="取消识别"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:radius="1px"
+        android:layout_margin="20px"
+        android:id="@+id/stopSpectrogramButton"
+        android:textSize="8pt"
+        android:text="取消生成语谱图"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.tsiangleo.sr.client.activity.VerifyVoiceActivity">
+
+
+    <TextView
+        android:id="@+id/hintTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#ffffff"
+        android:background="@drawable/bg"
+        android:gravity="center"
+        android:text="说话人语音识别子系统~"/>
+
+    <ImageView
+        android:id="@+id/imageViewSpectrogram"
+    android:layout_margin="20px"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:scaleType="fitXY"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageViewSpectrogram2"-->
+        <!--android:layout_margin="20px"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:scaleType="fitXY"/>-->
+
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_margin="20px"
+        android:textColor="#030303"
+        android:text="正在录音..."
+        android:textSize="8pt"
+        android:layout_width="wrap_content"
+        android:layout_height="400px"
+        android:id="@+id/statusTextView" />
+
+    <Chronometer
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id ="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="400px"
+        android:format="正在录音\n\n%s"
+        android:textSize="8pt"
+        android:textColor="#030303"
+        />
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:layout_margin="20px"
+        android:id="@+id/startRecordButton"
+        android:textSize="8pt"
+        android:text="开始录音"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:radius="1px"
+        android:layout_margin="20px"
+        android:id="@+id/stopRecordButton"
+        android:textSize="8pt"
+        android:text="停止录音"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:radius="1px"
+        android:layout_margin="20px"
+        android:id="@+id/stopRecognitionButton"
+        android:textSize="8pt"
+        android:text="取消识别"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:radius="1px"
+        android:layout_margin="20px"
+        android:id="@+id/stopConvertButton"
+        android:textSize="8pt"
+        android:text="取消转换"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@drawable/view_yuan_button"
+        android:radius="1px"
+        android:layout_margin="20px"
+        android:id="@+id/stopSpectrogramButton"
+        android:textSize="8pt"
+        android:text="取消生成语谱图"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
